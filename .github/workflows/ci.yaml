@@ -42,12 +42,3 @@ jobs:
           push: true
           tags: |
             repox/laravel-dev-php:7.3
-      - name: Build and push PHP 7.2 image
-        uses: docker/build-push-action@v2
-        with:
-          context: ./php7.2
-          file: ./php7.2/Dockerfile
-          platforms: linux/amd64,linux/arm64,linux/386
-          push: true
-          tags: |
-            repox/laravel-dev-php:7.2
