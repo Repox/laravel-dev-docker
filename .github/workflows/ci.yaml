@@ -43,4 +43,6 @@ jobs:
           context: ./php8.0
           file: ./php8.0/Dockerfile
           push: true
-          tags: repox/laravel-dev-php:8.0,repox/laravel-dev-php:latest
+          tags: 
+            - repox/laravel-dev-php:8.0
+            - repox/laravel-dev-php:latest
