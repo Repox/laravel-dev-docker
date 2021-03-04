@@ -1,4 +1,4 @@
-name: ci
+name: "PHP 7.4 Build"
 
 on:
   push:
