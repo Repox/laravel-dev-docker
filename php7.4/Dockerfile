@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 MAINTAINER Dan Storm
 
@@ -16,7 +16,7 @@ RUN apt-get update \
     && add-apt-repository -y ppa:ondrej/php \
     && apt-get update \
     && apt-get install -y php7.4-fpm php7.4-cli php7.4-gd php7.4-mysql php7.4-intl php7.4-bcmath php7.4-sqlite \
-       php7.4-pgsql php7.4-imap php-memcached php7.4-mbstring php7.4-xml php7.4-curl php-redis \
+       php7.4-pgsql php7.4-imap php-memcached php7.4-mbstring php7.4-xml php7.4-curl php7.4-redis \
     && php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
     && mkdir /run/php \
     && apt-get remove -y --purge software-properties-common \
