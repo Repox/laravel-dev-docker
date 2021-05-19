@@ -1,4 +1,4 @@
-name: "PHP 7.3 Build"
+name: "PHP 7.0 Build"
 
 on:
   push:
