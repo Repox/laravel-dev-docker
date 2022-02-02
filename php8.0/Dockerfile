@@ -19,6 +19,7 @@ RUN apt-get update \
        php8.0-pgsql php8.0-imap php-memcached php8.0-mbstring php8.0-xml php8.0-curl php8.0-redis php8.0-soap php8.0-mailparse \
     && php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
     && mkdir /run/php \
+    && update-alternatives --install /usr/bin/php php  /usr/bin/php8.0 100 \
     && apt-get remove -y --purge software-properties-common \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*

@@ -19,6 +19,7 @@ RUN apt-get update \
        php7.0-pgsql php7.0-imap php-memcached php7.0-mbstring php7.0-xml php7.0-curl php7.0-redis php7.0-soap php7.0-mailparse \
     && php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
     && mkdir /run/php \
+    && update-alternatives --install /usr/bin/php php  /usr/bin/php7.0 100 \
     && apt-get remove -y --purge software-properties-common \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
