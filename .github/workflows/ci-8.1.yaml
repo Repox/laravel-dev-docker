@@ -27,7 +27,7 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           context: ./php8.1
-          file: ./php8.0/Dockerfile
+          file: ./php8.1/Dockerfile
           push: true
           tags: | 
             repox/laravel-dev-php:latest
