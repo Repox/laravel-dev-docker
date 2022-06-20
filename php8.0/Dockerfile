@@ -15,7 +15,7 @@ RUN apt-get update \
     && apt-get install -y curl zip unzip git software-properties-common \
     && add-apt-repository -y ppa:ondrej/php \
     && apt-get update \
-    && apt-get install -y php8.0-fpm php8.0-cli php8.0-gd php8.0-mysql php8.0-intl php8.0-bcmath php8.0-sqlite php8.0-xdebug \
+    && apt-get install -y php8.0-fpm php8.0-cli php8.0-gd php8.0-mysql php8.0-intl php8.0-bcmath php8.0-sqlite php8.0-xdebug php8.0-zip \
        php8.0-pgsql php8.0-imap php-memcached php8.0-mbstring php8.0-xml php8.0-curl php8.0-redis php8.0-soap php8.0-mailparse \
     && php -r "readfile('http://getcomposer.org/installer');" | php -- --install-dir=/usr/bin/ --filename=composer \
     && mkdir /run/php \
