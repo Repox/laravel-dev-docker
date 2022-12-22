@@ -1,4 +1,4 @@
-name: "PHP 8.0 Build"
+name: "PHP 8.2 Build"
 
 on:
   push:
@@ -23,10 +23,12 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Build and push PHP 8.0 image
+      - name: Build and push PHP 8.2 image
         uses: docker/build-push-action@v2
         with:
-          context: ./php8.0
-          file: ./php8.0/Dockerfile
+          context: ./php8.2
+          file: ./php8.2/Dockerfile
           push: true
-          tags: repox/laravel-dev-php:8.0
+          tags: | 
+            repox/laravel-dev-php:latest
+            repox/laravel-dev-php:8.2
