@@ -24,7 +24,7 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-ADD php-fpm.conf /etc/php/8.2fpm/php-fpm.conf
+ADD php-fpm.conf /etc/php/8.2/fpm/php-fpm.conf
 ADD www.conf /etc/php/8.2/fpm/pool.d/www.conf
 ADD php.ini /etc/php/8.2/fpm/php.ini
 
